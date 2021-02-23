@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
- resourses :users
- resourses :sessions
+  root "home#index"
+ resources :users
+ resources :sessions
 end
