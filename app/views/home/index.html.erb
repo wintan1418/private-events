@@ -1,2 +1,5 @@
-<h1>WELCOME TO THE PUBLIC PRIVATE</h1>
-<p>We are private gigs here!</p>
+<h1 class="text-center">WELCOME TO THE PUBLIC PRIVATE</h1>
+<p class="text-center">We are private gigs here!</p>
+<% if logged_in? %>
+  <%= link_to "Create Post", new_event_path, class: "text-center" %>
+<% end %>

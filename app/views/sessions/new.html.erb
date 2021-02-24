@@ -3,8 +3,5 @@
 <%= form_for :login do |f| %>
   <%= f.label :name, 'Name:' %>
   <%= f.text_field :name %>
-  <% if alert %>
-      <%= alert %><br><br>
-    <% end %>
   <%= f.submit 'Log In'%>
 <% end %>
