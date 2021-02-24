@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   delete '/logout' => 'sessions#destroy'
   resources :users
 
-  root "events#index"
+
   
+
 end
