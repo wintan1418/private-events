@@ -2,5 +2,8 @@
 <%= form_with model: @user do |f| %>
   <%= f.label :name %><br>
   <%= f.text_field :name %><br>
+  <% if alert %>
+    <%= alert %><br><br>
+   <% end %>
   <%= f.submit %>
 <% end %>

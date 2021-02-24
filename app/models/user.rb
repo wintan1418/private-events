@@ -1,3 +1,4 @@
 class User < ApplicationRecord
-  validates :name, presence: true, uniqueness: true, length: {minimum:3, maximum:10}
+    has_many :events, as: :creator
+  validates :name, presence: true, uniqueness:{case_sensitive: false}, length: {minimum:3, maximum:10}
 end
