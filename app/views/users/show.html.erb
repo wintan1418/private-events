@@ -1,7 +1,9 @@
 <h1 class="text-center">My Events</h1>
 <ul>
   <% if @events != nil %>
-    <li><%= @events.description %></li>
+    <% @events.each do |f| %>
+      <li><%= f.description %></li>
+    <% end %>
   <% else %>
     <li>You have not created an event!</li>
   <% end %>

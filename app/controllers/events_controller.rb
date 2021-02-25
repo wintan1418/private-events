@@ -18,7 +18,7 @@ class EventsController < ApplicationController
    end
 
    def show
-     
+     @events = Event.find_by(id: event_path.last)
    end
 
    private

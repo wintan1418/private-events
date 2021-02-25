@@ -1,9 +1,12 @@
 <h1 class="text-center">Welcome to PrivEve</h1>
-<div class="border border-3 position-absolute top-50 start-50 translate-middle">
+<div>
   <h2>Here is a list of available events</h2>
   <ul>
     <% @events.each do |ev| %>
-      <li><%= ev.description %></li>
+      <li><%= ev.description %></li><%= link_to "View", event_path(id: ev.id) %>
     <% end %>
   </ul>
 </div>
+<% if logged_in? %>
+  <%= link_to "Create Event", new_event_path, class: "text-center" %>
+<% end %>
