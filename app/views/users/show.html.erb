@@ -1,0 +1,14 @@
+<h1 class="text-center">Events</h1>
+<h2>My events:</h2>
+<ul>
+  <% @events.each do |e| %>
+    <li><%= e.description %></li>
+  <% end %>
+</ul>
+<h2>Events to attend:</h2>
+<ul>
+  <% @attend.each do |a| %>
+    <li><%= a.description %></li>
+  <% end %>
+</ul>
+
