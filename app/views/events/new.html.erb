@@ -1,7 +1,0 @@
-<h1>Event:</h1>
-<%= form_with model: @event do |f| %>
-  <%= @event.errors.full_messages %>
-  <%= f.label :description, "Description:" %>
-  <%= f.text_area :description, size: "60x10" %>
-  <%= f.submit "Create" %>
-<% end %>
