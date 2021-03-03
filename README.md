@@ -4,11 +4,11 @@ This project is built on the fundamentals of associations between models.
 
 ## When a user is signed out:
 
-![image](./signed_out.png)
+![image](./when_is_logged_out.png)
 
 ## When a user is signed in:
 
-![image](./signed_in.png)
+![image](./when_is_logged_in.png)
 
 ## Built-With
 
