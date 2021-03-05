@@ -2,7 +2,7 @@
 <div>
   <h2>Here is a list of upcoming events:</h2>
   <ul>
-    <% @events.upcoming.each do |ev| %>
+    <% @upcoming_events.each do |ev| %>
       <li><%= ev.description %><br><%= ev.date %></li><%= link_to "View", event_path(id: ev.id) %><br>
       <% if logged_in? %>
         <%= link_to "Attend", event_attendences_path(event_id: ev.id), method: :post %>
@@ -11,7 +11,7 @@
   </ul>
   <h2>Here is a list of past events:</h2>
   <ul>
-    <% @events.past.each do |ev| %>
+    <% @past_events.each do |ev| %>
       <li><%= ev.description %><br><%= ev.date %></li><%= link_to "View", event_path(id: ev.id) %><br>
       <% if logged_in? %>
         <%= link_to "Attend", event_attendences_path(event_id: ev.id), method: :post %>
