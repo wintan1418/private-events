@@ -11,13 +11,6 @@
   </head>
 
   <body>
-    <%= render "shared/navb" %>
-    <% if notice %>
-      <%= notice %>
-    <% end %>
-    <% if alert %>
-      <%= alert %>
-    <% end %>
-    <%= yield %>
+  <%= layout_logic %>
   </body>
 </html>
