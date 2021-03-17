@@ -27,7 +27,7 @@ module ApplicationHelper
     links = ''
     if logged_in?
       links << link_to(link_to('Attend', event_attendences_path(event_id: ev.id), method: :post))
-      links << link_to(link_to('Create  ', new_event_path, class: 'text-center'))
+      links << link_to(link_to('Create Event  ', new_event_path, class: 'text-center'))
 
     end
     links.html_safe
