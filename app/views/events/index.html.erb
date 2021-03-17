@@ -11,8 +11,8 @@
   <ul>
     <% @past_events.each do |ev| %>
       <li><%= ev.description %><br><%= ev.date %></li><%= link_to "View", event_path(id: ev.id) %><br>
+      <%= logic(ev) %>
     <% end %>
-    <%= logic %>
   </ul>
 </div>
 
