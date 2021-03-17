@@ -33,8 +33,9 @@ To get this project up and running locally, you must already have ruby and neces
 4. cd```private-events```.
 5. Run ```bundle install``` to get the necesary gems.
 6. Run `rails db:migrate`.
-7. Run `rails server` and visit `http://localhost:3000/ ` to create start the example.
-8. To test RSpec run `rspec` or `bundle exec rspec`.
+7. Run `yarn install`
+8. Run `rails server` and visit `http://localhost:3000/ ` to create start the example.
+9. To test RSpec run `rspec` or `bundle exec rspec`.
 
 
 ## Authors
