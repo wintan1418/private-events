@@ -23,10 +23,10 @@ module ApplicationHelper
     links.html_safe
   end
 
-  def logic(ev)
+  def logic(eve)
     links = ''
     if logged_in?
-      links << link_to(link_to('Attend', event_attendences_path(event_id: ev.id), method: :post))
+      links << link_to(link_to('Attend', event_attendences_path(event_id: eve.id), method: :post))
       links << link_to(link_to('Create Event  ', new_event_path, class: 'text-center'))
 
     end
