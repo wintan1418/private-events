@@ -14,6 +14,7 @@ module ApplicationHelper
     if logged_in?
       links << link_to(link_to('MyEvents', user_path(current_user.id), class: 'nav-link'))
       links << link_to(link_to('Log Out', logout_path, method: :delete, class: 'nav-link'))
+      links << link_to(link_to('Create Event  ', new_event_path, class: 'nav-link'))
 
     else
       links << link_to(link_to('Login', login_path, class: 'nav-link'))
