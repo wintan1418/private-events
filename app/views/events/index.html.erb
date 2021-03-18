@@ -1,0 +1,18 @@
+<h1 class="text-center">Welcome to PrivEve</h1>
+<div>
+  <h2>Here is a list of upcoming events:</h2>
+  <ul>
+    <% @upcoming_events.each do |eve| %>
+      <li><%= eve.description %><br><%= eve.date %></li><%= link_to "View", event_path(id: eve.id) %><br>
+      <%= logic(eve) %>
+    <% end %>
+  </ul>
+  <h2>Here is a list of past events:</h2>
+  <ul>
+    <% @past_events.each do |eve| %>
+      <li><%= eve.description %><br><%= eve.date %></li><%= link_to "View", event_path(id: eve.id) %><br>
+      <%= logic(eve) %>
+      <% end %>
+  </ul>
+</div>
+

@@ -1,0 +1,30 @@
+class EventsController < ApplicationController
+  def index
+    @upcoming_events = Event.upcoming
+    @past_events = Event.past
+  end
+
+  def new
+    @event = Event.new
+  end
+
+  def create
+    @event = current_user.events.build(event_params)
+    if @event.save
+      redirect_to events_path, notice: 'Event created successfully!'
+    else
+      flash.now.alert = 'Invalid Event!'
+      render :new
+    end
+  end
+
+  def show
+    @events = Event.find(params[:id])
+  end
+
+  private
+
+  def event_params
+    params.require(:event).permit(:description, :date)
+  end
+end
